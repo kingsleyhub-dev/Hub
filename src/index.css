@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kingsley Hub Premium Dark Design System */
+
+@layer base {
+  :root {
+    /* Dark premium theme */
+    --background: 0 0% 4%;
+    --foreground: 43 20% 90%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 43 20% 90%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 43 20% 90%;
+
+    /* Warm gold primary */
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 43 20% 85%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 43 74% 49%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 43 30% 25%;
+    --input: 0 0% 12%;
+    --ring: 43 74% 49%;
+
+    --radius: 0.75rem;
+
+    /* Custom gold shades */
+    --gold: 43 74% 49%;
+    --gold-light: 43 74% 60%;
+    --gold-dark: 43 74% 35%;
+    --gold-muted: 43 30% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .font-brand {
+    font-family: 'Cinzel', serif;
+  }
+
+  .bg-gradient-dark {
+    background: radial-gradient(ellipse at center, hsl(0 0% 8%) 0%, hsl(0 0% 3%) 70%, hsl(0 0% 2%) 100%);
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .text-gold-light {
+    color: hsl(var(--gold-light));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+
+  .border-gold-muted {
+    border-color: hsl(var(--gold-muted));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+
+  .bg-gold-dark {
+    background-color: hsl(var(--gold-dark));
+  }
+
+  /* Glass card effect */
+  .glass-card {
+    background: linear-gradient(145deg, hsl(0 0% 10% / 0.9), hsl(0 0% 6% / 0.95));
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--gold-muted) / 0.3);
+    box-shadow: 
+      0 25px 50px -12px hsl(0 0% 0% / 0.5),
+      0 0 0 1px hsl(var(--gold) / 0.1),
+      inset 0 1px 0 hsl(0 0% 100% / 0.05);
+  }
+
+  /* Rotating ring animation */
+  @keyframes rotate-ring {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-rotate-ring {
+    animation: rotate-ring 20s linear infinite;
+  }
+
+  /* Gold button styles */
+  .btn-gold {
+    @apply relative overflow-hidden font-medium tracking-wide;
+    background: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(43 74% 40%) 100%);
+    color: hsl(0 0% 5%);
+    transition: all 0.3s ease;
+  }
+
+  .btn-gold:hover {
+    background: linear-gradient(135deg, hsl(43 74% 55%) 0%, hsl(43 74% 45%) 100%);
+    box-shadow: 0 0 30px hsl(43 74% 49% / 0.4);
+  }
+
+  /* Code input styles */
+  .code-input {
+    @apply w-12 h-14 sm:w-14 sm:h-16 text-center text-xl sm:text-2xl font-semibold rounded-lg;
+    background: hsl(0 0% 8%);
+    border: 2px solid hsl(var(--gold-muted) / 0.4);
+    color: hsl(var(--gold));
+    transition: all 0.2s ease;
+  }
+
+  .code-input:focus {
+    outline: none;
+    border-color: hsl(var(--gold));
+    box-shadow: 0 0 15px hsl(var(--gold) / 0.3);
+  }
+
+  .code-input::placeholder {
+    color: hsl(0 0% 30%);
+  }
+
+  /* Subtle glow effect */
+  .glow-gold {
+    box-shadow: 0 0 40px hsl(43 74% 49% / 0.15);
+  }
+}
