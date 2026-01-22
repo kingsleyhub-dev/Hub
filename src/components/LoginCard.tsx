@@ -84,8 +84,8 @@ const LoginCard = () => {
 
       {/* Tip */}
       <p className="text-muted-foreground text-xs sm:text-sm text-center mt-4">
-        Tip: Dont Copy Paste The Code, Just Type The 6-Digit Code Manually.{" "}
-        <span className="text-gold-light">6-digit code</span>.
+        Tip: Dont Copy Paste The Code, Just Type The {" "}
+        <span className="text-gold-light">6-digit Code Manually.</span>.
       </p>
 
       {/* Footer */}
