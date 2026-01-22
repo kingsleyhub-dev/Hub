@@ -96,7 +96,7 @@ const LoginCard = () => {
             href="#"
             className="text-gold-light hover:text-gold transition-colors underline-offset-2 hover:underline"
           >
-            Need help?
+            ... More Coming Soon.
           </a>
         </p>
       </div>
