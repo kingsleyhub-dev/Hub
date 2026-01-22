@@ -40,7 +40,7 @@ const LoginCard = () => {
         Enter your 6-digit access code
       </h2>
       <p className="text-muted-foreground text-sm text-center mb-6 px-4">
-        This helps us verify it's you. Your code is valid for a short time.
+        Sent To Your Whatsapp Number.
       </p>
 
       {/* Code Input */}
@@ -84,14 +84,14 @@ const LoginCard = () => {
 
       {/* Tip */}
       <p className="text-muted-foreground text-xs sm:text-sm text-center mt-4">
-        Tip: You can paste the full{" "}
+        Tip: Dont Copy Paste The Code, Just Type THE 6-Digit Code Manually.{" "}
         <span className="text-gold-light">6-digit code</span>.
       </p>
 
       {/* Footer */}
       <div className="mt-8 pt-6 border-t border-gold-muted/20">
         <p className="text-muted-foreground text-xs sm:text-sm text-center">
-          © 2024 Kingsley Hub.{" "}
+          © 2026 Kingsley Hub.{" "}
           <a
             href="#"
             className="text-gold-light hover:text-gold transition-colors underline-offset-2 hover:underline"
